@@ -1,0 +1,29 @@
+package 数组;
+
+import java.util.Arrays;
+
+/**
+ * https://leetcode-cn.com/problems/remove-element/
+ * @author diaojt
+ *
+ */
+public class _27_移除元素 {
+
+	public int removeElement(int[] nums, int val) {
+		if (nums.length == 0) return 0;
+		int left = 0;
+		int right = nums.length - 1;
+		while (left < right) {
+			if (val == nums[left]) {
+				if (nums[right] != val) {
+					nums[left] = nums[right];
+					left ++ ;
+				}
+				right --;
+			}
+		}
+		
+		
+		return left;
+    }
+}

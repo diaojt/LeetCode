@@ -1,0 +1,5 @@
+package com.diaojt;
+
+public interface List {
+
+}
